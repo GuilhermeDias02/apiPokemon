@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: PokedexRepository::class)]
 #[ApiResource]
-#[ApiFilter(SearchFilter::class, properties: ['region.id' => 'exact', 'type.id' => 'exact'])]
+#[ApiFilter(SearchFilter::class, properties: ['region.id' => 'exact', 'type.id' => 'exact', 'idPokedex' => 'exact', 'name' => 'partial'])]
 class Pokedex
 {
     #[ORM\Id]

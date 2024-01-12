@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: PcBoxRepository::class)]
 #[ApiResource]
-#[ApiFilter(SearchFilter::class, properties: ['idTrainer.id' => 'exact', 'idPokedex.id' => 'exact'])]
+#[ApiFilter(SearchFilter::class, properties: ['idTrainer.id' => 'exact', 'idPokedex.id' => 'exact', 'captured' => 'exact'])]
 class PcBox
 {
     #[ORM\Id]
